@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2025-04-01T04:25:44-04:00",
+  "id": "how-to-integrate-a-zoomapp-nextjs",
+  "duration": 21,
+  "title": "Integrate multi-feature Zoom app integration: Chatbot and Team Chat",
+  "authors": "Donte",
+  "summary": "How to integrate Team Chat and chatbot with Zoom App SDK",
+  "source": "integrate-teamchat-chatbot.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "sample"
+  ],
+  "tags": [
+    "medium"
+  ],
+  "feedback": "https://devforum.zoom.us/c/zoom-apps",
+  "url": "how-to-integrate-a-zoomapp-nextjs"
+}
