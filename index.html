@@ -66,6 +66,28 @@
 
       </google-codelab-step>
     
+      <google-codelab-step label="Project Setup" duration="0">
+        <p>If you&#39;re starting from this step, let&#39;s first set up your development environment</p>
+<ol type="1">
+<li>Clone the project and switch to the correct branch:</li>
+</ol>
+<pre><code language="language-bash" class="language-bash">git clone https://github.com/zoom/task-manager-sample.git
+cd task-manager-sample
+git checkout step-1-zoom-install
+
+</code></pre>
+<ol type="1" start="2">
+<li>Install dependencies and start the app:</li>
+</ol>
+<pre><code language="language-bash" class="language-bash">npm install
+npm run dev
+
+</code></pre>
+<p>Now, you have a Task Manager application built with Next.js that integrates with Supabase for authentication and storage.</p>
+
+
+      </google-codelab-step>
+    
       <google-codelab-step label="Zoom Team Chat Vs. Chatbot APIs" duration="6">
         <p>Zoom offers two powerful ways to extend Team Chat functionality: Team Chat APIs and Chatbot APIs. While both interact with Zoom Team Chat, they use different authentication mechanisms and are designed for distinct use cases.</p>
 <p>In this part of the tutorial, we&#39;ll start by implementing Chatbot functionality, which uses a unique access token that does not require a refresh token—making it ideal for lightweight, event-driven interactions.</p>
