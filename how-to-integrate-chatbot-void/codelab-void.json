@@ -3,8 +3,8 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2025-05-25T20:16:24-04:00",
-  "id": "how-to-integrate-chatbot",
+  "updated": "2025-05-25T20:04:44-04:00",
+  "id": "how-to-integrate-a-zoomapp-nextjs",
   "duration": 21,
   "title": "Integrate multi-feature app integration: Chatbot",
   "authors": "Donte",
@@ -21,5 +21,5 @@
     "medium"
   ],
   "feedback": "https://devforum.zoom.us/c/zoom-apps",
-  "url": "how-to-integrate-chatbot"
+  "url": "how-to-integrate-a-zoomapp-nextjs"
 }

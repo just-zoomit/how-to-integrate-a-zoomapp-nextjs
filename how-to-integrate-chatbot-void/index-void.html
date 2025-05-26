@@ -23,7 +23,7 @@
   <google-codelab-analytics gaid="UA-49880327-14" ga4id=""></google-codelab-analytics>
   <google-codelab codelab-gaid=""
                   codelab-ga4id=""
-                  id="how-to-integrate-chatbot"
+                  id="how-to-integrate-a-zoomapp-nextjs"
                   title="Integrate multi-feature app integration: Chatbot"
                   environment="web"
                   feedback-link="https://devforum.zoom.us/c/zoom-apps">
@@ -365,16 +365,12 @@ export async function sendTeamChatBotMessage(prevState: any, formData: FormData)
       </google-codelab-step>
     
       <google-codelab-step label="Add server action to component" duration="8">
-        <p>In this section, you will import the server action function for the Zoom Chatbot and connect it to the frontend to enable automated messaging.</p>
-<h2 is-upgraded>Import the server action into the task details component</h2>
-<p><strong>File Path: </strong><code>components/taskmanger/task-details.tsx</code></p>
-<p>Paste in the following starter code:</p>
+        <p>In this section, we will import our server action chatbot function and connect it to the frontend.</p>
+<h2 is-upgraded>Import server action into task details component</h2>
 <pre><code language="language-javascript" class="language-javascript">// Import Server Action
 import { sendTeamChatBotMessage } from &#34;@/app/lib/chatbot&#34;;
 </code></pre>
 <h2 is-upgraded>Handle form submission state</h2>
-<p>Update the form submission handler in the task details component. Each time the form is submitted, a message will be sent to the Zoom Team Chatbot for the Task Manager app.</p>
-<p>Paste in the following starter code:</p>
 <pre><code language="language-javascript" class="language-javascript"> // Handle form submission state
   const [state, formAction] = useActionState(sendTeamChatBotMessage, { success: false });
 
