@@ -90,7 +90,7 @@ npm run dev
 
       </google-codelab-step>
     
-      <google-codelab-step label="Zoom Team Chat Vs. Chatbot APIs" duration="6">
+      <google-codelab-step label="Overview: Zoom Team Chat Vs. Chatbot APIs" duration="6">
         <p>Zoom offers two powerful ways to extend Team Chat functionality: Team Chat APIs and Chatbot APIs. While both interact with Zoom Team Chat, they use different authentication mechanisms and are designed for distinct use cases.</p>
 <p>In this part of the tutorial, we&#39;ll start by implementing Chatbot functionality, which uses a unique access token that does not require a refresh token—making it ideal for lightweight, event-driven interactions.</p>
 <p>Chatbots are especially effective for keeping teams in sync and up to date, whether by posting reminders, surfacing action items, or responding to slash commands. To demonstrate this, we&#39;ll integrate Chatbot APIs into the Add Activity modal, enabling real-time task updates directly in chat.</p>
@@ -182,10 +182,12 @@ npm run dev
 
       </google-codelab-step>
     
-      <google-codelab-step label="Create Zoom Chatbot Server Actions" duration="7">
-        <p>In this section, you will create all the functions needed to interact with the Zoom Chatbot API.</p>
-<h2 is-upgraded>Add getTeamChatBot Access Token method API</h2>
-<p>Get the access token for the team chat bot</p>
+      <google-codelab-step label="Create Zoom Chatbot server actions" duration="7">
+        <p>In this section, you will create the functions required to interact with the Zoom Chatbot REST API.</p>
+<h2 is-upgraded>Step 1: Add the getTeamChatBotAccessToken method</h2>
+<p>Create a method to retrieve the access token for the team chat bot.</p>
+<p><strong>File path: </strong><code>app/lib/chatbot.ts</code></p>
+<p>Paste in the following starter code:</p>
 <pre><code language="language-javascript" class="language-javascript">&#39;use server&#39;;
 
 const ZOOM_API_BASE_URL = &#39;https://api.zoom.us/v2&#39;;
@@ -320,6 +322,10 @@ async function sendMessageToZoom(accessToken: string, payload: any): Promise&lt;
 
 </code></pre>
 <h2 is-upgraded>Chatbot message handler</h2>
+<p>In this section, you will implement a message handler using the Zoom Chatbot REST API. This API allows you to send notifications that help keep your team aligned and informed—ideal for automating task updates and status messages within Zoom Team Chat.</p>
+<p>File Path: <code>components/taskmanger/task-details.tsx</code></p>
+<h2 is-upgraded>Step 2 Import Chatbot functions:</h2>
+<p>Paste in the following starter code:</p>
 <pre><code language="language-javascript" class="language-javascript">/**
  * Server Action: Handles sending messages to the Zoom Team Chatbot.
  */
