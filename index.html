@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <meta name="theme-color" content="#4F7DC9">
   <meta charset="UTF-8">
-  <title>Integrate multi-feature app integration: Chatbot</title>
+  <title>Integrate multi-feature Zoom app: Chatbot</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
@@ -24,7 +24,7 @@
   <google-codelab codelab-gaid=""
                   codelab-ga4id=""
                   id="how-to-integrate-teamchatbot"
-                  title="Integrate multi-feature app integration: Chatbot"
+                  title="Integrate multi-feature Zoom app: Chatbot"
                   environment="web"
                   feedback-link="https://devforum.zoom.us/c/zoom-apps">
     
@@ -35,15 +35,15 @@
 <p>Part 1: <a href="https://just-zoomit.github.io/multi-feature-zoom-manifest-file/#0" target="_blank">Create a multi-feature Zoom app with a manifest file: Team Chat, Chatbot and Meetings</a></p>
 <p>Part 2: <a href="https://just-zoomit.github.io/zoomapp-taskmanager-codelab/#0" target="_blank">Setup development environment: Zoom, Ngrok, and Supabase developer accounts</a></p>
 <p>Part 3: <a href="https://just-zoomit.github.io/how-to-install-and-authorize-zoom-app-sdk-with-supabase/#0" target="_blank">Install and authorize multi-feature app integration: Zoom App, Team Chat, and Supabase Auth</a></p>
-<p><strong>Part 4: </strong><a href="https://just-zoomit.github.io/how-to-integrate-a-zoomapp-nextjs/#0" target="_blank"><strong>Integrate multi-feature Zoom app integration: Chatbot and Team Chat</strong></a></p>
-<p>Part 5: <a href="https://just-zoomit.github.io/how-to-integrate-teamchat-za/#0" target="_blank">Integrate multi-feature app integration: Team Chat</a></p>
-<p>Part 6: <a href="https://just-zoomit.github.io/how-to-deep-link-zoom-client-za/#0" target="_blank">Integrate multi-feature app integration: Deep linking</a></p>
-<p>Part 7: <a href="https://just-zoomit.github.io/how-to-integrate-webhooks-za/#0" target="_blank">Integrate multi-feature app integration: Webhooks</a></p>
-<p>Part 8: <a href="https://just-zoomit.github.io/how-to-integrate-slash-commands-za/#0" target="_blank">Integrate multi-feature app integration: Slash commands</a></p>
-<p>Part 9: <a href="https://just-zoomit.github.io/how-to-integrate-zoom-app-sdk/#0" target="_blank">Integrate multi-feature app integration: Zoom Apps SDK third-party OAuth</a></p>
+<p><strong>Part 4: </strong><a href="https://just-zoomit.github.io/how-to-integrate-a-zoomapp-nextjs/#0" target="_blank"><strong>Integrate multi-feature Zoom app: Chatbot and Team Chat</strong></a></p>
+<p>Part 5: <a href="https://just-zoomit.github.io/how-to-integrate-teamchat-za/#0" target="_blank">Integrate multi-feature Zoom app: Team Chat</a></p>
+<p>Part 6: <a href="https://just-zoomit.github.io/how-to-deep-link-zoom-client-za/#0" target="_blank">Integrate multi-feature Zoom app: Deep linking</a></p>
+<p>Part 7: <a href="https://just-zoomit.github.io/how-to-integrate-webhooks-za/#0" target="_blank">Integrate multi-feature Zoom app: Webhooks</a></p>
+<p>Part 8: <a href="https://just-zoomit.github.io/how-to-integrate-slash-commands-za/#0" target="_blank">Integrate multi-feature Zoom app: Slash commands</a></p>
+<p>Part 9: <a href="https://just-zoomit.github.io/how-to-integrate-zoom-app-sdk/#0" target="_blank">Integrate multi-feature Zoom app: Zoom Apps SDK third-party OAuth</a></p>
 <p>Part 10: <a href="https://just-zoomit.github.io/build-collabo-meeting-experiences-zoomapp-sdk/#0" target="_blank">Build collaborative meeting experiences: Zoom Apps SDK</a></p>
 <p>Part 11: <a href="https://just-zoomit.github.io/how-to-build-collabo-meeting-experiences-zoom-app-sdk/#0" target="_blank">Build collaborative team chat experiences: Zoom Apps framework</a></p>
-<p>⚠️ <strong>Warning:</strong> Some feature requires a paid plan.</p>
+<p>⚠️ <strong>Warning:</strong> Some features require a paid plan.</p>
 <p>💡 <strong>Tip:</strong> If you don&#39;t have a paid workspace for development, you can join by signing up for a <a href="https://www.zoom.us/pricing" target="_blank">free Zoom account</a>, which provides access to all Zoom Developer platform features. To learn more about powering your service with Zoom, visit <a href="https://explore.zoom.us/en/investor-alliances" target="_blank">Zoom for Startups</a>.</p>
 
 
@@ -325,7 +325,7 @@ async function sendMessageToZoom(accessToken: string, payload: any): Promise&lt;
 </code></pre>
 <h2 is-upgraded>Chatbot message handler</h2>
 <p>In this section, you will implement a message handler using the Zoom Chatbot REST API. This API allows you to send notifications that help keep your team aligned and informed—ideal for automating task updates and status messages within Zoom Team Chat.</p>
-<p>File Path: <code>components/taskmanger/task-details.tsx</code></p>
+<p>File Path: <code>components/taskmanager/task-details.tsx</code></p>
 <h2 is-upgraded>Step 2 Import Chatbot functions:</h2>
 <p>Paste in the following starter code:</p>
 <pre><code language="language-javascript" class="language-javascript">/**
@@ -369,7 +369,7 @@ export async function sendTeamChatBotMessage(prevState: any, formData: FormData)
       <google-codelab-step label="Add server action to component" duration="8">
         <p>In this section, you will import the server action function for the Zoom Chatbot and connect it to the frontend to enable automated messaging.</p>
 <h2 is-upgraded>Import the server action into the task details component</h2>
-<p><strong>File Path: </strong><code>components/taskmanger/task-details.tsx</code></p>
+<p><strong>File Path: </strong><code>components/taskmanager/task-details.tsx</code></p>
 <p>Paste in the following starter code:</p>
 <pre><code language="language-javascript" class="language-javascript">// Import Server Action
 import { sendTeamChatBotMessage } from &#34;@/app/lib/chatbot&#34;;
@@ -396,7 +396,7 @@ import { sendTeamChatBotMessage } from &#34;@/app/lib/chatbot&#34;;
       </google-codelab-step>
     
       <google-codelab-step label="Conclusion" duration="0">
-        <p>Congratulations! You learned how to use Zoom App SDK and Team chat Team buildt with supabase to add features and functionality to a Next.js app. Specifically, you used the following:</p>
+                <p>Congratulations! You learned how to use the Zoom App SDK and a Team Chat built with Supabase to add features and functionality to a Next.js app.</p>
 <h3 is-upgraded>Learn more</h3>
 <ul>
 <li><a href="https://developers.zoom.us/docs/zoom-apps/" target="_blank">Getting started with Zoom App</a></li>
